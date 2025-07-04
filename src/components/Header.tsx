@@ -5,13 +5,14 @@ import {
   Sun,
   Menu,
   X,
+  LinkedinIcon,
   Instagram,
   Facebook,
   FacebookIcon,
   Github,
 } from "lucide-react";
 import { Youtube, Twitter } from "lucide-react";
-import { FaFacebook, FaFigma, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaFigma, FaWhatsapp, FaLinkedin } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
 import { useState, useEffect } from "react";
 const Header = () => {
@@ -154,20 +155,12 @@ const Header = () => {
           <div className="flex items-center space-x-3 sm:space-x-4">
             {/* Social Icons */}
             <a
-              href="https://wa.me/917569259998"
+              href="https://www.linkedin.com/in/durgesh-anupoju/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-300 hover:text-green-500"
             >
-              <FaWhatsapp className="w-5 h-5" />
-            </a>
-            <a
-              href="https://www.instagram.com/durgesh.psd/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 dark:text-gray-300 hover:text-pink-500"
-            >
-              <Instagram className="w-5 h-5" />
+              <FaLinkedin className="w-5 h-5" />
             </a>
             <a
               href="https://github.com/anupojudurgesh"
@@ -176,6 +169,14 @@ const Header = () => {
               className="text-gray-600 dark:text-gray-300 hover:text-gray-500"
             >
               <Github className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.instagram.com/durgesh.psd/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 dark:text-gray-300 hover:text-pink-500"
+            >
+              <Instagram className="w-5 h-5" />
             </a>
 
             {/* Divider */}

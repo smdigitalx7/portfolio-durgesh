@@ -158,22 +158,22 @@ overflow-hidden transition-transform duration-300 hover:scale-[1.03]
                       : "translate-y-8 opacity-0 bg-white dark:bg-gray-800"
                   }`}
                 >
-                  <h4 className="text-white dark:text-white sm:text-xl text-base font-bold mb-1">
-                    {project.title}
-                  </h4>
-                  <p className="text-gray-300 text-sm  sm:text-base">
-                    {project.description}
-                  </p>
-                  <div className="flex items-center justify-center mt-2">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`Visit ${project.title}`}
-                    >
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit ${project.title}`}
+                  >
+                    <h4 className="text-white dark:text-white sm:text-xl text-base font-bold mb-1">
+                      {project.title}
+                    </h4>
+                    <p className="text-gray-300 text-sm  sm:text-base">
+                      {project.description}
+                    </p>
+                    <div className="flex items-center justify-center mt-2">
                       <MoveUpRight className="w-6 h-6 px-1 py-1 text-gray-100 bg-gray-900 dark:bg-gray-200 dark:text-gray-900 rounded-md " />
-                    </a>
-                  </div>
+                    </div>
+                  </a>
                 </button>
               </div>
             </motion.div>

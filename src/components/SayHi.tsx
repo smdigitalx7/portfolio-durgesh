@@ -7,12 +7,14 @@ const SayHiByAnima = () => {
       icon: <BsWhatsapp className="w-5 h-5" />,
       text: "Whatsapp",
       gradient: "bg-gradient-to-r from-[#25D366] to-[#128C7E]",
+      href: "https://wa.link/v4tpbs",
     },
     {
       icon: <MailIcon className="w-5 h-5" />,
-      text: "hi@designdurgesh.com",
+      text: "hi@thedurgesh.in",
       gradient:
         "bg-gradient-to-r from-[rgba(240,104,68,1)]  via-[rgba(212,94,149,1)]  to-[rgba(101,131,193,1)]",
+      href: "mailto:hi@thedurgesh.in",
     },
   ];
 
@@ -37,9 +39,12 @@ const SayHiByAnima = () => {
 
             <div className="flex sm:items-start items-center sm:gap-6 sm:mt-6  mt-6 flex-col sm:flex-row">
               {contactOptions.map((option, index) => (
-                <div
+                <a
                   key={index}
-                  className="flex items-center gap-1 py-0.5 cursor-pointer text-gray-500 "
+                  href={option.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 py-0.5 cursor-pointer text-gray-500"
                 >
                   {option.icon}
                   <span
@@ -47,7 +52,7 @@ const SayHiByAnima = () => {
                   >
                     {option.text}
                   </span>
-                </div>
+                </a>
               ))}
             </div>
           </div>

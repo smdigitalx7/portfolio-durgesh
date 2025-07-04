@@ -79,17 +79,14 @@ const Contact = () => {
               <div className="mt-6 space-y-3 text-[16px] text-gray-600 dark:text-gray-300">
                 <div className="flex items-center gap-2">
                   <MailIcon className="w-5 h-5 text-purple-500" />
-                  <a
-                    href="mailto:hi@designdurgesh.com"
-                    className="hover:underline"
-                  >
-                    hi@designdurgesh.com
+                  <a href="mailto:hi@thedurgesh.in" className="hover:underline">
+                    hi@thedurgesh.in
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
                   <BsWhatsapp className="w-5 h-5 text-green-500" />
                   <a
-                    href="https://wa.me/917569259998"
+                    href="https://wa.link/v4tpbs"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:underline"
