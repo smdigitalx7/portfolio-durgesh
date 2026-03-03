@@ -1,0 +1,66 @@
+---
+description: Portfolio projects list and descriptions for consistent copy and new entries
+alwaysApply: false
+globs: src/components/Projects.tsx,src/pages/Work.tsx
+---
+
+# Portfolio Projects Reference
+
+## Current Projects (keep in sync with Projects.tsx & Work.tsx)
+
+| Title           | Category    | Description                                                                 | Year        | Link / Notes                    |
+|----------------|-------------|-----------------------------------------------------------------------------|-------------|----------------------------------|
+| APIGen         | Development | AI-powered tool to generate and run API test cases.                        | 2024–Present| apigen.soilsoft.ai; featured    |
+| Label Design   | Design      | Creative and print-ready labels for product branding.                       | 2025        | Behance gallery                  |
+| Travel Website | Development | Responsive site to explore and book travel packages.                        | 2025        | zennationals.com                 |
+| Logo Design    | Branding    | Unique logo concepts crafted for strong brand recall.                      | 2023        | Behance gallery                  |
+| Static Websites| Development | Clean and fast-loading websites built with Elementor/WordPress.             | 2024        | Behance gallery                  |
+| Brochure Designs | Design    | Elegant layouts for promotional business brochures.                         | 2024        | Behance; asset brouchure.png     |
+
+---
+
+## Suggested New Projects (with descriptions)
+
+Use these when adding more work; keep tone short and outcome-focused.
+
+1. **Brand Identity — [Client/Project name]**  
+   *Category: Branding*  
+   Full brand identity: logo, palette, and visual guidelines for consistent storytelling.
+
+2. **E‑commerce UI/UX**  
+   *Category: Design / Development*  
+   End-to-end product discovery and checkout flows with a focus on conversion and clarity.
+
+3. **Dashboard / Admin Panel**  
+   *Category: Development*  
+   Data-dense dashboard with clear hierarchy, filters, and responsive layout (React/TypeScript).
+
+4. **Mobile App UI**  
+   *Category: Design*  
+   UI and interaction design for iOS/Android (Figma); component set and key flows.
+
+5. **Landing Page — [Product/Campaign]**  
+   *Category: Development*  
+   High-converting landing page with clear CTA, trust elements, and fast load.
+
+6. **Illustration Set**  
+   *Category: Design*  
+   Custom illustrations for web or print: icons, spots, or editorial.
+
+7. **Design System / Component Library**  
+   *Category: Development*  
+   Reusable React components and tokens for consistent UI across products.
+
+8. **API / Backend Integration**  
+   *Category: Development*  
+   Frontend integration with REST/GraphQL APIs; error handling and loading states.
+
+---
+
+## Copy Conventions
+- **Titles**: Title case, no period.
+- **Descriptions**: One sentence; start with outcome or type of work (e.g. “AI-powered…”, “Responsive…”).
+- **Years**: “2024”, “2024 – Present”, or “2023” for past only.
+- **Categories**: Use existing: Development, Design, Branding.
+
+When adding a project, add it to both `Projects.tsx` (home grid) and `Work.tsx` (work page) with matching `id`, `title`, `category`, `description`, `image`, `year`, `link`, and `featured`/`status` if needed.

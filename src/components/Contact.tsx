@@ -45,7 +45,7 @@ const Contact = () => {
       <section className="py-10 mt-32 ">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold   mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
+            <h1 className="text-4xl md:text-5xl font-normal   mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
               About Me
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-lg mx-auto">
@@ -108,7 +108,7 @@ const Contact = () => {
     //     <div className="flex flex-col md:flex-row items-center justify-between gap-10">
     //       {/* Left section */}
     //       <div className="w-full md:w-[340px]">
-    //         <h2 className="bg-gradient-to-br from-[rgba(240,104,68,1)] via-[rgba(238,76,84,1)] via-[rgba(212,94,149,1)] via-[rgba(156,108,166,1)] to-[rgba(101,131,193,1)] bg-clip-text text-transparent font-bold text-[44px] tracking-[-0.88px] leading-[52.8px] font-['Inter',Helvetica]">
+    //         <h2 className="bg-gradient-to-br from-[rgba(240,104,68,1)] via-[rgba(238,76,84,1)] via-[rgba(212,94,149,1)] via-[rgba(156,108,166,1)] to-[rgba(101,131,193,1)] bg-clip-text text-transparent font-normal text-[44px] tracking-[-0.88px] leading-[52.8px] font-['Inter',Helvetica]">
     //           Let's Connect!
     //         </h2>
     //         <p className="mt-4 opacity-80 font-medium text-[20px] tracking-[-0.36px] leading-8">

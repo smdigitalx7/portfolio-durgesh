@@ -46,7 +46,7 @@ export const Footer = (): JSX.Element => {
                   dark:hover:text-white
                   ${
                     isActive
-                      ? "opacity-100 text-black dark:text-white font-bold underline underline-offset-4"
+                      ? "opacity-100 text-black dark:text-white font-normal underline underline-offset-4"
                       : ""
                   }
                 `}

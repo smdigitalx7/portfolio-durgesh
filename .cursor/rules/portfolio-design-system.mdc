@@ -1,0 +1,123 @@
+---
+description: Portfolio design system, UI patterns, and animation guidelines for consistent aesthetic
+alwaysApply: true
+---
+
+# Portfolio Design System & UI Audit
+
+## Tech Stack
+- **React 18** + **TypeScript** + **Vite**
+- **Tailwind CSS** (darkMode: `class`)
+- **Framer Motion** for animations
+- **React Router**, **react-helmet-async**, **lucide-react**, **react-icons**
+
+---
+
+## Design Tokens
+
+### Colors
+- **Background**: `bg-white` / `dark:bg-[#0A0A0D]`; body text `text-[#0A0A0D]` / `dark:text-white`
+- **Primary gradient (brand)**: `from-pink-500 via-purple-500 to-blue-500` (logo, nav active, page titles)
+- **Hero/name gradient**: `from-[#4AB1F1] via-[#566CEC] via-[#D749AF] to-[#FF7C51]`
+- **Say Hi / Contact gradient**: `from-[rgba(240,104,68,1)] via-[rgba(238,76,84,1)] via-[rgba(212,94,149,1)] via-[rgba(156,108,166,1)] to-[rgba(101,131,193,1)]`
+- **Card/panel gradient (light)**: `from-[rgba(226,224,253,0.5)] to-[rgba(241,222,228,0.55)]`
+- **Card/panel gradient (dark)**: `from-[rgba(30,28,50,0.5)] to-[rgba(43,22,29,0.55)]`
+- **Project card bg**: `linear-gradient(90deg,rgba(30,28,50,0.05)_0%,rgba(43,22,29,0.05)_100%)` (light) / same with 0.5 opacity (dark)
+- **Selection**: `bg-purple-500 text-white`
+
+### Typography
+- **Font**: Inter (300, 400, 500, 600, 700) from Google Fonts
+- **Section labels**: `text-base font-semibold text-gray-600 dark:text-gray-400 opacity-30 uppercase tracking-[.25em]` (e.g. "FEATURED PROJECTS", "WORK IN MOTION", "My Story")
+- **Page titles**: `text-4xl md:text-5xl font-bold tracking-tight` + gradient text (pink → purple → blue)
+- **Body**: `text-gray-700 dark:text-gray-300`, `text-gray-600 dark:text-gray-400` for secondary
+- **Links**: gradient or `hover:text-gray-900 dark:hover:text-gray-300`, `hover:scale-105`
+
+### Spacing & Layout
+- **Container**: `max-w-7xl mx-auto` (global); page content often `max-w-3xl` or `max-w-4xl mx-auto`
+- **Section padding**: `py-6 sm:py-10 px-6` or `px-4 md:px-6`
+- **Header**: `max-w-[700px]` centered, `rounded-full`, `px-6 sm:px-8 py-4 sm:py-3`
+
+### Border Radius
+- **Cards/panels**: `rounded-2xl` or `rounded-[20px]`
+- **Header**: `rounded-full`
+- **Badges**: `rounded-full`
+
+---
+
+## Background System
+- **Noise textures**: `bg-light-noise` (lightbg2.png) / `bg-dark-noise` (darkbg.png) via Tailwind; optional overlay with `before:bg-light-noise` etc.
+- **Full-page gradients**: SVG assets `header-gradient.svg` (top), `footer-gradient.svg` (bottom); used in Layout/Home as absolute positioned images with responsive heights (e.g. `h-[180px] sm:h-[400px] md:h-[370px] lg:h-[670px]`).
+
+---
+
+## Component Patterns
+
+### Header
+- Fixed, `top-4`, pill-shaped; scroll state: `bg-white/70 dark:bg-gray-900/80 backdrop-blur-xl border border-gray-200/10`
+- Unscrolled: `bg-white/30 dark:bg-gray-900/30 backdrop-blur-xl`
+- Nav: lowercase labels (home, work, services, about, contact); active = default text color; hover scale 1.05
+- Social: LinkedIn, GitHub, Instagram; divider; theme toggle (Sun/Moon); mobile menu (Menu/X)
+- Mobile: “best experience on desktop” notification (sessionStorage); dropdown nav with gradient active state
+
+### Hero
+- Three-column layout: Designer (left), Coder (right), hero image center; intro text below with name gradient and @SMDigitalX link
+- Motion: fade + x for left/right; scale + y for image; y for intro block (stagger delays ~0.2–0.4s)
+
+### Project Cards (Home grid)
+- Grid: `grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6`
+- Card: gradient background, `rounded-2xl`, hover `scale-[1.03]`; on hover: blur background, overlay with title + description + “In Progress” badge when `featured`
+- Animation: container stagger 0.1, item `opacity 0→1`, `y: 20→0`, duration 0.5
+
+### DecorativeBar
+- Centered; Vector.png (light) / Vectorlight.png (dark); flanking bars: lightbar.png, lightbar2.png (light) / group-1938.png, group-1938-1.png (dark); used between page title and content on Work, About, Contact
+
+### Say Hi / Contact CTA
+- Rounded panel with gradient bg (light/dark variants); “Say hi!” or “Start a Conversation” with multistop gradient text; contact links (WhatsApp, email) with gradient text; profile image with blur glow (rectangle-1.png)
+
+### Footer
+- “@durgesh ✦ durgesh anupoju”; nav links (same as header); “Keep it simple, stupid!” with Leftbar/Rightbar or group-1938 images; `opacity-20` / `opacity-80` for hierarchy
+
+---
+
+## Animation Guidelines (Framer Motion)
+- **Page/block entrance**: `initial={{ opacity: 0, y: 20 }}` → `animate` or `whileInView={{ opacity: 1, y: 0 }}`; `viewport={{ once: true }}`; duration 0.5–0.7
+- **Stagger**: `staggerChildren: 0.1` for grids/lists
+- **Hero**: left `x: -20`, right `x: 20`, image `scale: 0.8, y: 30`; delays 0, 0.2, 0.3, 0.4
+- **Tailwind**: `transition-all duration-300`, `hover:scale-105`; single keyframe `float` (translateY 0 → -20px, 6s ease-in-out infinite)
+- **Improvements to consider**: reduce layout shift (hero image positioning); add subtle stagger on scroll; consistent easing (e.g. ease-out); optional reduced-motion media query
+
+---
+
+## Theme
+- `ThemeContext`: `light` | `dark`; stored in localStorage; `document.documentElement.classList.add('dark')`; respects `prefers-color-scheme: dark` on first load and via listener.
+
+---
+
+## Do’s for New Work
+- Use the same gradient set for headings and CTAs; keep section labels uppercase with letter-spacing.
+- Use DecorativeBar (or same asset set) between title and content on new pages.
+- Use same card gradient and hover scale for any new project or feature cards.
+- Prefer Framer Motion for entrance and list stagger; keep durations 0.3–0.7s.
+- Keep header/footer nav and theme behavior unchanged unless explicitly improving them.
+
+---
+
+## Improvements to Prioritize (same aesthetic, better execution)
+
+### Animations
+- [ ] Hero: reduce layout shift; consider `layout` or fixed aspect ratio for hero image.
+- [ ] Use one easing curve project-wide (e.g. `ease-out` or custom cubic-bezier).
+- [ ] Add subtle scroll-triggered stagger to Experience and long text blocks.
+- [ ] Optional: `prefers-reduced-motion: reduce` support (disable or shorten animations).
+- [ ] Float/keyframe usage: ensure only one main "float" element to avoid busyness.
+
+### UI / Visual
+- [ ] Fix ContactPage.tsx: page shows "About Me" heading; align with Contact copy or split.
+- [ ] Unify gradient definitions (consider CSS variables or Tailwind theme) to avoid raw rgba in JSX.
+- [ ] DecorativeBar: ensure asset paths work in production (e.g. /Vector.png from public).
+- [ ] Project card hover: clarify blur vs overlay so text stays readable on all images.
+
+### Consistency
+- [ ] Work.tsx project links: replace placeholder "https://example.com" with real URLs (match Projects.tsx).
+- [ ] Single source of truth for project list: consider `src/data/projects.ts` used by both Projects and Work.
+- [ ] Footer/Contact: align social links and labels with Header (e.g. same LinkedIn/Instagram URLs).

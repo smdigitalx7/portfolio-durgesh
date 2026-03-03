@@ -1,11 +1,6 @@
-import {
-  BsWhatsapp,
-  BsInstagram,
-  BsLinkedin,
-  BsTwitterX,
-  BsGithub,
-} from "react-icons/bs";
+import { BsWhatsapp, BsInstagram, BsLinkedin } from "react-icons/bs";
 import { MailIcon, MapPin } from "lucide-react";
+import { motion } from "framer-motion";
 import Layout from "../components/Layout";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -15,71 +10,43 @@ const Contact = () => {
   return (
     <Layout>
       <Header />
-      <section className="py-10 mt-20 sm:mt-32 px-2 sm:px-6 md:px-8 ">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto text-center ">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
+      <section className="py-10 mt-20 sm:mt-32 px-4 sm:px-6 md:px-8 min-h-screen">
+        <div className="container mx-auto px-2 sm:px-4 md:px-6">
+          <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-16">
+            {/* <p className="text-sm font-medium text-gray-600 dark:text-gray-400 opacity-30 uppercase tracking-[.25em] mb-2">
+              Get in Touch
+            </p> */}
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-normal mb-4 sm:mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
               Contact
             </h1>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-lg mx-auto">
-              Got a project, idea, or just want to say hi? Don’t be shy—my inbox
-              is always open.
+            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-lg mx-auto">
+              Got a project, idea, or just want to say hi? My inbox is always open.
             </p>
-
-            {/* Decorative bar */}
-            {/* <div className="relative w-[454px] max-w-md md:max-w-xl lg:max-w-2xl h-4 opacity-80 mx-auto mt-16 mb-12">
-              <div className="text-center absolute top-[-6px] bottom-0 left-1/2 transform -translate-x-1/2 text-base text-gray-400">
-                <img
-                  className="w-full dark:hidden"
-                  alt="Decorative"
-                  src="/Vector.png"
-                />
-                <img
-                  className="w-full hidden dark:block"
-                  alt="Decorative"
-                  src="/Vectorlight.png"
-                />
-              </div> */}
-            {/* Light theme images */}
-            {/* <div className="absolute w-[187px] h-3.5 top-[-6px] left-0 opacity-20 bg-[url(/lightbar.png)] bg-[100%_100%] bg-no-repeat dark:hidden" />
-              <div className="absolute w-[127px] h-3.5 top-[-6px] left-[270px] opacity-20 rotate-180 bg-no-repeat dark:hidden">
-                <img
-                  className="absolute w-[127px] h-3.5 top-0 left-0 -rotate-180"
-                  alt="Group"
-                  src="/lightbar2.png"
-                />
-              </div> */}
-            {/* Dark theme images */}
-            {/* <div className="absolute w-[187px] h-3.5 top-[-6px] left-0 opacity-30 bg-[url(/group-1938.png)] bg-[100%_100%] bg-no-repeat hidden dark:block" />
-              <div className="absolute w-[127px] h-3.5 top-[-6px] left-[270px] rotate-180 opacity-30 bg-no-repeat hidden dark:block">
-                <img
-                  className="absolute w-[127px] h-3.5 top-0 left-0 -rotate-180"
-                  alt="Group"
-                  src="/group-1938-1.png"
-                />
-              </div>
-            </div>*/}
+            <DecorativeBar />
           </div>
-          <DecorativeBar />
         </div>
 
-        {/* Gradient Box */}
-        <div
-          className="w-full rounded-[20px] px-6 md:px-8 py-6 md:py-8
+        {/* Say Hi / Contact CTA — same gradient as design system */}
+        <div className="container mx-auto px-2 sm:px-4 md:px-6 max-w-4xl">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="w-full rounded-2xl px-6 md:px-8 py-6 md:py-8
             bg-gradient-to-r from-[rgba(226,224,253,0.5)] to-[rgba(241,222,228,0.55)]
-            dark:from-[rgba(30,28,50,0.5)] dark:to-[rgba(43,22,29,0.55)]"
+            dark:from-[rgba(30,28,50,0.5)] dark:to-[rgba(43,22,29,0.55)]
+            shadow-[0_4px_20px_rgba(0,0,0,0.07)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.2)]"
         >
-          <div className="flex flex-col md:flex-row items-center justify-between p-6 md:p-8 gap-10 ">
-            {/* Left section */}
+          <div className="flex flex-col md:flex-row items-center justify-between p-6 md:p-8 gap-10">
             <div className="w-full md:w-[340px]">
-              <h2 className="bg-gradient-to-br from-[rgba(240,104,68,1)] via-[rgba(238,76,84,1)] via-[rgba(212,94,149,1)] via-[rgba(156,108,166,1)] to-[rgba(101,131,193,1)] bg-clip-text text-transparent font-bold text-[36px] md:text-[44px] leading-tight font-['Inter',Helvetica]">
+              <h2 className="font-display bg-gradient-to-br from-[rgba(240,104,68,1)] via-[rgba(238,76,84,1)] via-[rgba(212,94,149,1)] via-[rgba(156,108,166,1)] to-[rgba(101,131,193,1)] bg-clip-text text-transparent font-normal text-3xl sm:text-4xl md:text-[44px] leading-tight">
                 Start a Conversation
               </h2>
 
-              <div className="mt-6 space-y-3 text-[16px] text-gray-600 dark:text-gray-300">
+              <div className="mt-6 space-y-3 text-base text-gray-700 dark:text-gray-300">
                 <div className="flex items-center gap-2">
                   <MailIcon className="w-5 h-5 text-purple-500" />
-                  <a href="mailto:hi@thedurgesh.in" className="hover:underline">
+                  <a href="mailto:hi@thedurgesh.in" className="hover:underline hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
                     hi@thedurgesh.in
                   </a>
                 </div>
@@ -89,7 +56,7 @@ const Contact = () => {
                     href="https://wa.link/v4tpbs"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline"
+                    className="hover:underline hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
                   >
                     +91 75692 59998
                   </a>
@@ -104,7 +71,7 @@ const Contact = () => {
                     href="https://www.linkedin.com/in/durgesh-anupoju/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline"
+                    className="hover:underline hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
                   >
                     durgesh-anupoju
                   </a>
@@ -115,7 +82,7 @@ const Contact = () => {
                     href="https://www.instagram.com/durgesh.psd/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline"
+                    className="hover:underline hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
                   >
                     @durgesh.psd
                   </a>
@@ -139,6 +106,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
+        </motion.div>
         </div>
       </section>
       <Footer />

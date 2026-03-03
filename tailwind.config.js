@@ -79,14 +79,25 @@ export default {
           "Arial",
           "sans-serif",
         ],
+        display: [
+          "Lora",
+          "Georgia",
+          "ui-serif",
+          "serif",
+        ],
       },
       animation: {
         float: "float 6s ease-in-out infinite",
+        "scroll-logos": "scroll-logos 35s linear infinite",
       },
       keyframes: {
         float: {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-20px)" },
+        },
+        "scroll-logos": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
         },
       },
     },

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import HeroLogosStrip from "./HeroLogosStrip";
 
 const Hero = () => {
   return (
@@ -14,7 +15,7 @@ const Hero = () => {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-1 sm:mb-4 text-gray-800 dark:text-white text-center">
+              <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-normal mb-1 sm:mb-4 text-gray-800 dark:text-white text-center">
                 designer!
               </h2>
               <p className="text-gray-600 dark:text-gray-300 mb-2 sm:mb-4 text-[10px] leading-3 sm:text-base md:text-sm text-center">
@@ -32,7 +33,7 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative"
             >
-              <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-1 sm:mb-4 text-gray-800 dark:text-white text-center">
+              <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-normal mb-1 sm:mb-4 text-gray-800 dark:text-white text-center">
                 {"<coder>"}
               </h2>
               <p className="text-gray-600 dark:text-gray-300 mb-2 sm:mb-4 text-[10px] leading-3 sm:text-base md:text-sm text-center">
@@ -50,7 +51,7 @@ const Hero = () => {
           className="flex justify-center mb-8"
         >
           <img
-            src="/hero.png"
+            src="/hero.webp"
             alt="Hero"
             className="w-full sm:max-w-md md:max-w-none absolute top-[-110px] sm:top-[-120px] md:top-[-150px] left-0 right-0 bottom-0 object-cover inset-0 -z-30"
           />
@@ -64,9 +65,9 @@ const Hero = () => {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="mt-32 sm:mt-56 md:mt-10 max-w-3xl mx-auto text-left sm:text-center px-4 sm:p-0"
       >
-        <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed mt-12 sm:mt-72 md:mt-[300px] px-2 sm:px-8">
+        <p className=" sm:text-base text-sm text-gray-700 md:text-base dark:text-gray-300 mb-4 leading-relaxed mt-12 sm:mt-72 md:mt-[270px] px-2 sm:px-8">
           Hi! I’m{" "}
-          <span className="bg-gradient-to-r from-[#4AB1F1] via-[#566CEC] via-[#D749AF] to-[#FF7C51] bg-clip-text text-transparent font-semibold">
+          <span className="bg-gradient-to-r from-[#4AB1F1] via-[#566CEC] via-[#D749AF] to-[#FF7C51] bg-clip-text text-transparent font-normal">
             Durgesh Anupoju!
           </span>{" "}
           A wizard who loves design and code. I create clean, user-friendly
@@ -80,13 +81,14 @@ const Hero = () => {
             href="https://www.smdigitalx.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-to-r from-[#4AB1F1] to-[#566CEC] bg-clip-text text-transparent font-semibold hover:underline"
+            className="bg-gradient-to-r from-[#4AB1F1] to-[#566CEC] bg-clip-text text-transparent font-normal hover:underline"
           >
             @SMDigitalX
           </a>
         </p>
       </motion.div>
-      {/* Background Gradients */}
+
+      <HeroLogosStrip />
     </section>
   );
 };

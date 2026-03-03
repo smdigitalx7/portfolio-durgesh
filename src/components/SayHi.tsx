@@ -28,7 +28,7 @@ const SayHiByAnima = () => {
         <div className="flex flex-col md:flex-row items-center justify-between sm:px-6 sm:py-10 px-4 py-8">
           {/* Left section */}
           <div className="w-full md:w-[314px]">
-            <h2 className=" bg-gradient-to-br from-[rgba(240,104,68,1)] via-[rgba(238,76,84,1)] via-[rgba(212,94,149,1)] via-[rgba(156,108,166,1)] to-[rgba(101,131,193,1)] bg-clip-text text-transparent font-bold text-5xl tracking-[-0.88px] leading-[52.8px] text-center sm:text-left">
+            <h2 className="font-display bg-gradient-to-br from-[rgba(240,104,68,1)] via-[rgba(238,76,84,1)] via-[rgba(212,94,149,1)] via-[rgba(156,108,166,1)] to-[rgba(101,131,193,1)] bg-clip-text text-transparent font-normal text-5xl tracking-[-0.88px] leading-[52.8px] text-center sm:text-left">
               Say hi!
             </h2>
 

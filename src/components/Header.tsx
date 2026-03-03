@@ -74,7 +74,7 @@ const Header = () => {
           <div
             className={`
               relative flex items-center justify-center w-[95vw] max-w-md mx-auto mt-3
-              text-white text-center py-3 px-4 text-sm font-semibold shadow-2xl rounded-2xl
+              text-white text-center py-3 px-4 text-sm font-normal shadow-2xl rounded-2xl
               animate-fade-in-down
               ${
                 // Custom background for light/dark
@@ -95,10 +95,10 @@ const Header = () => {
           >
             <span className="flex-1">
               🌈 For the{" "}
-              <span className="font-bold underline">best experience</span>,
+              <span className="font-normal underline">best experience</span>,
               <br />
               please view this website on a{" "}
-              <span className="text-yellow-400 font-bold">desktop</span>! 🚀
+              <span className="text-yellow-400 font-normal">desktop</span>! 🚀
             </span>
             <button
               className="absolute top-2 right-2 text-white hover:text-gray-200 transition"
@@ -125,7 +125,7 @@ const Header = () => {
           {/* Logo */}
           <Link
             to="/"
-            className="text-xl sm:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500"
+            className="text-xl sm:text-2xl font-normal bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500"
           >
             <img src="/logo2.png" alt="Logo" className="w-16 sm:w-20" />
           </Link>
